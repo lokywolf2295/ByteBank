@@ -1,3 +1,8 @@
+package byteBank;
+
+
+import byteBank.Cuenta;
+
 
 public class PruebaMetodos {
     
