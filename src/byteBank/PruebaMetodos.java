@@ -9,13 +9,13 @@ public class PruebaMetodos {
     public static void main (String[] args) {
         //creamos una cuenta
         Cuenta miCuenta = new Cuenta();
-        miCuenta.saldo = 500;
+        miCuenta.setSaldo(500);
         miCuenta.depositar(200);
-        System.out.println(miCuenta.saldo);
+        System.out.println(miCuenta.getSaldo());
 
         boolean puedeRetirar = miCuenta.retirar(500);
         if(puedeRetirar) { //verifica si se puede o no retirar dinero
-            System.out.println("El retiro se realizó con exito su saldo es: " + miCuenta.saldo);
+            System.out.println("El retiro se realizó con exito su saldo es: " + miCuenta.getSaldo());
         } else {
             System.out.println("Su Saldo es Insuficiente para realizar esta operación");
         }
@@ -26,7 +26,7 @@ public class PruebaMetodos {
 
         boolean puedeTransferir = cuentaDeZoe.transferir(300, miCuenta);
         if(puedeTransferir) { //verifica si se puede o no realizar transferencias
-            System.out.println("La transferencia se realizó con exito su Saldo actual es: " + cuentaDeZoe.saldo);
+            System.out.println("La transferencia se realizó con exito su Saldo actual es: " + cuentaDeZoe.getSaldo());
         } else {
             System.out.println("Su Saldo es Insuficiente para realizar esta operación");
         }
