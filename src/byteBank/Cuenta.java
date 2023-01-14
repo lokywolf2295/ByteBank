@@ -3,10 +3,44 @@ package byteBank;
 
 public class Cuenta {
 
-    double saldo;
-    int agencia;
-    int numero;
-    Cliente titular; //ahora titular es un objeto de la clase Cliente
+    private double saldo;
+    private int agencia;
+    private int numero;
+    private Cliente titular; //ahora titular es un objeto de la clase Cliente
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Cliente getTitular() {
+        return titular;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+    
+    
 
     //no retorna un valor
     public void depositar(double valor) {

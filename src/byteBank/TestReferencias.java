@@ -7,18 +7,18 @@ public class TestReferencias {
 
     public static void main(String[] args) {
         Cuenta primeraCuenta = new Cuenta();
-        primeraCuenta.saldo = 300;
+        primeraCuenta.setSaldo(300);
 
-        System.out.println("saldo de primera cuenta : " + primeraCuenta.saldo);
+        System.out.println("saldo de primera cuenta : " + primeraCuenta.getSaldo());
 
         Cuenta segundaCuenta = primeraCuenta;
 
-        System.out.println("saldo de segunda Cuenta: " + segundaCuenta.saldo);
+        System.out.println("saldo de segunda Cuenta: " + segundaCuenta.getSaldo());
 
-        segundaCuenta.saldo += 100;
-        System.out.println("saldo de segunda Cuenta " + segundaCuenta.saldo);
+        segundaCuenta.setSaldo(100);
+        System.out.println("saldo de segunda Cuenta " + segundaCuenta.getSaldo());
 
-        System.out.println(primeraCuenta.saldo);
+        System.out.println(primeraCuenta.getSaldo());
 
         if(primeraCuenta == segundaCuenta) {
             System.out.println("Es la misma cuenta");
