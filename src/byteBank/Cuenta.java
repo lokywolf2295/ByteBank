@@ -6,7 +6,7 @@ public class Cuenta {
     double saldo;
     int agencia;
     int numero;
-    String titular;
+    Cliente titular; //ahora titular es un objeto de la clase Cliente
 
     //no retorna un valor
     public void depositar(double valor) {
