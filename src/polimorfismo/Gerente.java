@@ -15,9 +15,10 @@ public class Gerente extends Funcionario { //extiende de la clase funcionario
         this.clave = clave;
     }
 
-//    public double getBonificacion() {
-//        return this.salario;
-//    }
+    public double getBonificacion() { //sobreescribimos el metodo utilizando la palabra super
+        //super permite la utilización de metodos de la clase padre aunque sean privadas.
+        return super.getBonificacion() + super.getSalario();
+    }
 
     public boolean iniciarSesion(String clave) {
         if(this.clave == clave) {
