@@ -8,7 +8,7 @@ public class PruebaMetodos {
     
     public static void main (String[] args) {
         //creamos una cuenta
-        Cuenta miCuenta = new Cuenta();
+        Cuenta miCuenta = new Cuenta(35, 98743);
         miCuenta.setSaldo(500);
         miCuenta.depositar(200);
         System.out.println(miCuenta.getSaldo());
@@ -21,7 +21,7 @@ public class PruebaMetodos {
         }
         
         //creamos una segunda cuenta
-        Cuenta cuentaDeZoe = new Cuenta();
+        Cuenta cuentaDeZoe = new Cuenta(35, 984);
         cuentaDeZoe.depositar(1000);
 
         boolean puedeTransferir = cuentaDeZoe.transferir(300, miCuenta);
