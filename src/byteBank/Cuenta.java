@@ -1,12 +1,21 @@
 package byteBank;
 
-
 public class Cuenta {
 
     private double saldo;
-    private int agencia;
+    private int agencia = 1;
     private int numero;
-    private Cliente titular; //ahora titular es un objeto de la clase Cliente
+    private Cliente titular = new Cliente(); //ahora titular es un objeto de la clase Cliente
+
+    private static int total; //esta variable depende unicamente de la clase y no de la instancia
+
+    public Cuenta(int agencia, int numero) { //al momento de crear la instancia requerirá obligatoriamente la agencia y recibe el total como parametro
+        this.agencia = agencia;
+        this.numero = numero;
+        System.out.println("Estoy creando una cuenta " + this.numero);
+
+        Cuenta.total++;
+    }
 
     public double getSaldo() {
         return saldo;
@@ -21,7 +30,9 @@ public class Cuenta {
     }
 
     public void setAgencia(int agencia) {
-        this.agencia = agencia;
+        if (agencia > 0) {
+            this.agencia = agencia;
+        }
     }
 
     public int getNumero() {
@@ -29,7 +40,9 @@ public class Cuenta {
     }
 
     public void setNumero(int numero) {
-        this.numero = numero;
+        if (numero > 0) {
+            this.numero = numero;
+        }
     }
 
     public Cliente getTitular() {
@@ -40,7 +53,9 @@ public class Cuenta {
         this.titular = titular;
     }
     
-    
+    public static int getTotal() {
+        return Cuenta.total;
+    }
 
     //no retorna un valor
     public void depositar(double valor) {

@@ -3,7 +3,7 @@ package byteBank;
 public class TestCuentaSinCliente {
     
     public static void main(String[] args) {
-        Cuenta cuentaDeJimena = new Cuenta();
+        Cuenta cuentaDeJimena = new Cuenta(8,32416);
         System.out.println(cuentaDeJimena.getSaldo());
 
         cuentaDeJimena.setTitular(new Cliente());//si no creamos un objeto cliente de la clase cuenta no dará un NullPointerException
