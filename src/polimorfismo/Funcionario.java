@@ -40,6 +40,7 @@ public class Funcionario {
     }
 
     public double getBonificacion() {
+        System.out.println("Llamando metodo del Funcionario"); //mensaje solo para verificar la ejecucion desde funcionario
         return this.salario * 0.1;
     }
     
