@@ -17,6 +17,7 @@ public class Gerente extends Funcionario { //extiende de la clase funcionario
 
     public double getBonificacion() { //sobreescribimos el metodo utilizando la palabra super
         //super permite la utilización de metodos de la clase padre aunque sean privadas.
+        System.out.println("Llamando metodo del Gerente"); //mensaje solo para verificar la ejecucion desde gerente
         return super.getBonificacion() + super.getSalario();
     }
 
