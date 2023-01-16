@@ -2,7 +2,7 @@ package byteBank;
 
 public class Cuenta {
 
-    private double saldo;
+    protected double saldo;
     private int agencia = 1;
     private int numero;
     private Cliente titular = new Cliente(); //ahora titular es un objeto de la clase Cliente
@@ -73,7 +73,7 @@ public class Cuenta {
 
     public boolean transferir(double valor, Cuenta destino) {
         if (this.saldo >= valor) {
-            this.saldo -= valor;
+            this.retirar(valor);
             destino.depositar(valor);
             return true;
         }
