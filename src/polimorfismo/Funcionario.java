@@ -1,11 +1,15 @@
 package polimorfismo;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nombre;
     private String documento;
     private double salario;
     private int tipo;
+    
+    public Funcionario() {
+
+    }
 
     public String getNombre() {
         return nombre;
@@ -39,9 +43,6 @@ public class Funcionario {
         this.tipo = tipo;
     }
 
-    public double getBonificacion() {
-        System.out.println("Llamando metodo del Funcionario"); //mensaje solo para verificar la ejecucion desde funcionario
-        return this.salario * 0.1;
-    }
+    public abstract double getBonificacion();
     
 }
