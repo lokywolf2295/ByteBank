@@ -1,6 +1,6 @@
-package byteBank;
+package polimorfismo;
 
-public class Cuenta {
+public abstract class Cuenta {
 
     protected double saldo;
     private int agencia = 1;
@@ -58,9 +58,7 @@ public class Cuenta {
     }
 
     //no retorna un valor
-    public void depositar(double valor){
-        this.saldo = this.saldo + valor;
-    }
+    public abstract void depositar(double valor);
 
     //retorna un valor booleano
     public boolean retirar(double valor) {
