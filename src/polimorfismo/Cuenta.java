@@ -61,12 +61,11 @@ public abstract class Cuenta {
     public abstract void depositar(double valor);
 
     //retorna un valor booleano
-    public boolean retirar(double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            return true;
+    public void retirar(double valor) {
+        if (this.saldo < valor) {
+            throw new SaldoInsuficienteExeption("No tienes Saldo Insuficiente");
         }
-        return false;
+            this.saldo -= valor; 
     }
 
     public boolean transferir(double valor, Cuenta destino) {
