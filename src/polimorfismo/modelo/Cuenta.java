@@ -1,5 +1,11 @@
 package polimorfismo.modelo;
 
+/**
+* Clase que representa a una cuenta en ByteBank
+*
+* @autor Matias
+* @version 0.1
+*/
 public abstract class Cuenta {
 
     protected double saldo;
@@ -9,6 +15,13 @@ public abstract class Cuenta {
 
     private static int total; //esta variable depende unicamente de la clase y no de la instancia
 
+    /**
+     * Constructor para inicializar el objeto Cuenta a partir da agencia y
+     * numero
+     *
+     * @param agencia
+     * @param numero
+     */
     public Cuenta(int agencia, int numero) { //al momento de crear la instancia requerirá obligatoriamente la agencia y recibe el total como parametro
         this.agencia = agencia;
         this.numero = numero;
@@ -52,22 +65,39 @@ public abstract class Cuenta {
     public void setTitular(Cliente titular) {
         this.titular = titular;
     }
-    
+
     public static int getTotal() {
         return Cuenta.total;
     }
 
-    //no retorna un valor
+    /**
+     * el metodo abstracto depositar resive un valor 
+     *
+     * @param valor
+     */
     public abstract void depositar(double valor);
 
-    //retorna un valor booleano
+    /**
+     * el metodo retirar pemite restar valor a la cuenta seleccionada
+     * valor necesita ser menor o igual al saldo
+     *
+     * @param valor
+     * @throws SaldoInsuficienteException
+     */
     public void retirar(double valor) {
         if (this.saldo < valor) {
             throw new SaldoInsuficienteExeption("No tienes Saldo Insuficiente");
         }
-            this.saldo -= valor; 
+        this.saldo -= valor;
     }
 
+    /**
+     * este metodo permite seleccionar una cuenta y el monto que se desea enviar
+     * 
+     * @param valor
+     * @param destino
+     * @return un booleano 
+     */
     public boolean transferir(double valor, Cuenta destino) {
         if (this.saldo >= valor) {
             this.retirar(valor);

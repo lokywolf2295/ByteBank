@@ -2,6 +2,13 @@ package polimorfismo.modelo;
 
 import polimorfismo.modelo.Autenticable;
 
+
+/**
+* Clase que representa a un cliente en ByteBank
+*
+* @autor Matias
+* @version 0.1
+*/
 public class Cliente implements Autenticable{
     
     private String nombre;
