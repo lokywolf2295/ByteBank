@@ -1,4 +1,4 @@
-package polimorfismo;
+package polimorfismo.modelo;
 
 public class AutenticacionUtil {
     //esta clase permite evitar el acoplamiento, es decir crea metodos que son

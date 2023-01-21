@@ -1,4 +1,6 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Gerente;
 
 public class TestGerente {
 

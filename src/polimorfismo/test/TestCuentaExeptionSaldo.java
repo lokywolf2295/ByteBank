@@ -1,4 +1,7 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Cuenta;
+import polimorfismo.modelo.CuentaAhorros;
 
 public class TestCuentaExeptionSaldo {
     public static void main(String[] args) {

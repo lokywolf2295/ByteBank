@@ -1,5 +1,8 @@
 
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.CuentaAhorros;
+import polimorfismo.modelo.CuentaCorriente;
 
 public class TestCuenta {
     

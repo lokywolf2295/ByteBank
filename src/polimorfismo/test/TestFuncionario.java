@@ -1,4 +1,7 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Contador;
+import polimorfismo.modelo.Funcionario;
 
 public class TestFuncionario {
 

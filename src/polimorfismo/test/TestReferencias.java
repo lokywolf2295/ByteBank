@@ -1,4 +1,7 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Funcionario;
+import polimorfismo.modelo.Gerente;
 
 public class TestReferencias {
 
