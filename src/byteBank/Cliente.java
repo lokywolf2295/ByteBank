@@ -1,6 +1,6 @@
 package byteBank;
 
-import polimorfismo.Autenticable;
+import polimorfismo.modelo.Autenticable;
 
 public class Cliente{
     

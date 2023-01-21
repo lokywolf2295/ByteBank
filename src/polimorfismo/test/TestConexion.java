@@ -1,4 +1,6 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Conexion;
 
 public class TestConexion {
 

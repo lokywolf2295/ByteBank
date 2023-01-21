@@ -1,4 +1,9 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Contador;
+import polimorfismo.modelo.ControlBonificacion;
+import polimorfismo.modelo.Funcionario;
+import polimorfismo.modelo.Gerente;
 
 public class TestControlBonificacion {
 

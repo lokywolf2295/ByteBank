@@ -1,6 +1,6 @@
-package polimorfismo;
+package polimorfismo.modelo;
 
-import polimorfismo.Autenticable;
+import polimorfismo.modelo.Autenticable;
 
 public class Cliente implements Autenticable{
     

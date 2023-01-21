@@ -1,4 +1,4 @@
-package polimorfismo;
+package polimorfismo.modelo;
 
 public class SaldoInsuficienteExeption extends RuntimeException{
 

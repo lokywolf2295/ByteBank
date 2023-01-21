@@ -1,4 +1,4 @@
-package polimorfismo;
+package polimorfismo.modelo;
 
 public class Gerente extends Funcionario implements Autenticable { //extiende de la clase funcionario
     //es decir que gerente ES UN funcionario //en java no existe la herencia multiple es decir que solo se hereda de un padre

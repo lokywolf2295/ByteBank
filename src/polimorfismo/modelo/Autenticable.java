@@ -1,5 +1,5 @@
 
-package polimorfismo;
+package polimorfismo.modelo;
 
 public interface Autenticable {
     

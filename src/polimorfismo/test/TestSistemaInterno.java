@@ -1,4 +1,8 @@
-package polimorfismo;
+package polimorfismo.test;
+
+import polimorfismo.modelo.Administrador;
+import polimorfismo.modelo.Gerente;
+import polimorfismo.modelo.SistemaInterno;
 
 public class TestSistemaInterno {
 
