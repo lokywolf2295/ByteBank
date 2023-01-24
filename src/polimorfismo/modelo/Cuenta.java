@@ -106,4 +106,16 @@ public abstract class Cuenta {
         }
         return false;
     }
+    
+    /**
+     * modificamos el metodo toString para poder imprimir la agencia y no su espacio en memora
+     * @return cuenta
+     */    
+     @Override
+    public String toString() {
+    	String cuenta = "Numero: " + this.numero + ", Agencia:" + this.agencia;
+    	return cuenta;
+    }
+    
+    
 }
