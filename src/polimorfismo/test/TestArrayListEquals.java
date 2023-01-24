@@ -1,7 +1,5 @@
 package polimorfismo.test;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 import polimorfismo.modelo.Cuenta;
@@ -13,7 +11,7 @@ public class TestArrayListEquals {
 
         // <> Forzando a que acepte solo un tipo de objeto
 // Obligatorio especificar        No es obligatorio
-        List<Cuenta> lista = new Vector<Cuenta>();
+        List<Cuenta> lista = new Vector<>();
         // referencia    Objeto -> HEAP
         Cuenta cc = new CuentaCorriente(11, 22);
         Cuenta cc2 = new CuentaCorriente(13, 42);
@@ -30,7 +28,6 @@ public class TestArrayListEquals {
         if (contiene) {
             System.out.println("Si, es igual (equals)");
         }
-
     }
 }
 
