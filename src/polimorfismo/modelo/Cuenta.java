@@ -1,11 +1,11 @@
 package polimorfismo.modelo;
 
 /**
-* Clase que representa a una cuenta en ByteBank
-*
-* @autor Matias
-* @version 0.1
-*/
+ * Clase que representa a una cuenta en ByteBank
+ *
+ * @autor Matias
+ * @version 0.1
+ */
 public abstract class Cuenta {
 
     protected double saldo;
@@ -71,15 +71,15 @@ public abstract class Cuenta {
     }
 
     /**
-     * el metodo abstracto depositar resive un valor 
+     * el metodo abstracto depositar resive un valor
      *
      * @param valor
      */
     public abstract void depositar(double valor);
 
     /**
-     * el metodo retirar pemite restar valor a la cuenta seleccionada
-     * valor necesita ser menor o igual al saldo
+     * el metodo retirar pemite restar valor a la cuenta seleccionada valor
+     * necesita ser menor o igual al saldo
      *
      * @param valor
      * @throws SaldoInsuficienteException
@@ -93,10 +93,10 @@ public abstract class Cuenta {
 
     /**
      * este metodo permite seleccionar una cuenta y el monto que se desea enviar
-     * 
+     *
      * @param valor
      * @param destino
-     * @return un booleano 
+     * @return un booleano
      */
     public boolean transferir(double valor, Cuenta destino) {
         if (this.saldo >= valor) {
@@ -106,16 +106,25 @@ public abstract class Cuenta {
         }
         return false;
     }
-    
+
     /**
-     * modificamos el metodo toString para poder imprimir la agencia y no su espacio en memora
+     * modificamos el metodo toString para poder imprimir la agencia y no su
+     * espacio en memora
+     *
      * @return cuenta
-     */    
-     @Override
+     */
+    @Override
     public String toString() {
-    	String cuenta = "Numero: " + this.numero + ", Agencia:" + this.agencia;
-    	return cuenta;
+        String cuenta = "Numero: " + this.numero + ", Agencia:" + this.agencia;
+        return cuenta;
     }
-    
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        // Basada en valores
+    	Cuenta cuenta = (Cuenta) obj;
+    	return this.agencia == cuenta.getAgencia() && 
+    			this.numero == cuenta.getNumero();
+    }
+
 }
