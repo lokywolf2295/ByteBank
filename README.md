@@ -1,3 +1,5 @@
+<div align="center">
+
 # One Oracle Next Education
 ![One](https://i.postimg.cc/wxQsp28g/One-1.png)
  
